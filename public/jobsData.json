@@ -2,7 +2,7 @@
     {
         "job_id": "6435cafdbc6e97326351840e",
         "index": 0,
-        "company_log0": "https://i.ibb.co/r29SR8Z/airbnb.png",
+        "company_logo": "https://i.ibb.co/r29SR8Z/airbnb.png",
         "job_title": "Data Scientist",
         "company_name": "Airbnb",
         "remote_or_onsite": "Remote",
@@ -18,7 +18,7 @@
     {
         "job_id": "6435cafdb980691b3b88dab8",
         "index": 1,
-        "company_log0": "https://i.ibb.co/vk87DQy/meta.png",
+        "company_logo": "https://i.ibb.co/vk87DQy/meta.png",
         "job_title": "Game Developer - Beat Games",
         "company_name": "Meta",
         "remote_or_onsite": "On-site",
@@ -34,9 +34,9 @@
     {
         "job_id": "6435cafd0f9f6b05b3b2d657",
         "index": 2,
-        "company_log0": "https://i.ibb.co/Tq1N3LZ/google.png",
+        "company_logo": "https://i.ibb.co/Tq1N3LZ/google.png",
         "job_title": "Software Engineer (Frontend)",
-        "company_name": "Google",
+        "company_name": "Google LLC",
         "remote_or_onsite": "On-site",
         "address": "866 Nixon Court, Healy, Michigan, 8829",
         "job_type": "Full-time",
@@ -50,7 +50,7 @@
     {
         "job_id": "6435cafd934e73eb0168b2b6",
         "index": 3,
-        "company_log0": "https://i.ibb.co/hVKGgrM/microsoft.png",
+        "company_logo": "https://i.ibb.co/hVKGgrM/microsoft.png",
         "job_title": "Full-stack developer (Python & Nodejs)",
         "company_name": "Microsoft Corporation",
         "remote_or_onsite": "On-site",
@@ -66,7 +66,7 @@
     {
         "job_id": "6435cafdf4bfd090a3e56a36",
         "index": 4,
-        "company_log0": "https://i.ibb.co/9hnbtTB/netflix.png",
+        "company_logo": "https://i.ibb.co/9hnbtTB/netflix.png",
         "job_title": "Machine Learning Expert",
         "company_name": "Netflix SMC",
         "remote_or_onsite": "Remote",
@@ -82,7 +82,7 @@
     {
         "job_id": "6435cafdf4bfd090a3e58h39",
         "index": 5,
-        "company_log0": "https://i.ibb.co/ZGGxP8j/tesla.png",
+        "company_logo": "https://i.ibb.co/ZGGxP8j/tesla.png",
         "job_title": "Senior Electrical Engineer",
         "company_name": "Tesla Automotive company",
         "remote_or_onsite": "On-site",

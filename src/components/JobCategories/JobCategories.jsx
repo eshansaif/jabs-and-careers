@@ -11,7 +11,7 @@ const JobCategories = () => {
     }, [])
     return (
         <div className='mt-20'>
-            <h1 className="text-[#1A1919] font-bold text-5xl text-center">Job Category List</h1>
+            <h1 className="text-[#1A1919] font-bold text-5xl text-center underline">Job Category List</h1>
             <p className="text-[#757575] text-base font-medium text-center mt-[20px]">Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className="grid grid-cols-2 md:grid-cols-4 mt-[28px] gap-5 ">
                 {
