@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AppliedJob from '../AppliedJob/AppliedJob';
 
 const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([]);
@@ -10,13 +11,13 @@ const AppliedJobs = () => {
 
     return (
         <div>
-            <h2>Applied Jobs:</h2>
+            <h2 className="text-center">Applied Jobs</h2>
             <ul>
                 {appliedJobs.map(job => (
-                    <li key={job.job_id}>{job.job_title}</li>
+                    <AppliedJob key={job.job_id} job={job}></AppliedJob>
                 ))}
             </ul>
-        </div>
+        </div >
     );
 };
 

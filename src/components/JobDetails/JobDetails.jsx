@@ -22,11 +22,11 @@ const JobDetails = () => {
         const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs') || '[]');
         const isAlreadyApplied = appliedJobs.some(appliedJob => appliedJob.job_id === job.job_id);
         if (isAlreadyApplied) {
-            swal("You have already applied to this job.");
+            swal("Relax!", "You Have Already Applied For this Post!", "error");
         } else {
             appliedJobs.push(job);
             localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs));
-            swal("You have applied to the job successfully!");
+            swal("Good job!", "You have already applied to this Position Successfully!", "success");
         }
     }
 
