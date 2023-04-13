@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import swal from 'sweetalert';
+import DynamicBanner from '../../assets/DynamicBanner';
 
 
 const JobDetails = () => {
@@ -32,6 +33,7 @@ const JobDetails = () => {
 
     return (
         <div>
+            <DynamicBanner pageTitle='Job Details'></DynamicBanner>
             <div className="grid md:grid-cols-3 gap-6 mt-16">
                 <div className="md:col-span-2">
                     <h1 className="text-center text-[#1A1919] font-bold underline">{job.job_title}</h1>

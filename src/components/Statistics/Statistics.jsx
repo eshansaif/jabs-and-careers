@@ -18,8 +18,9 @@ const Statistics = () => {
     return (
 
         <div>
-            <DynamicBanner pageTitle="Statistics - Area Chat of Assignments Marks"></DynamicBanner>
+            <DynamicBanner pageTitle="Statistics"></DynamicBanner>
             <div className='mt-16'>
+                <h1 className='mb-4 text-center text-xl font-semibold'>Area Chat of Assignments Marks</h1>
                 <ResponsiveContainer width="100%" height={300}>
                     <AreaChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" />
