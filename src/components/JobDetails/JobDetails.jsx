@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
+
 
 const JobDetails = () => {
     const paramId = useParams();
@@ -14,7 +16,19 @@ const JobDetails = () => {
         setJob(detailedData);
     }, [])
 
-    const { job_description, educational_requirements, experiences, salary, job_title, phone, email, address } = job;
+    const { job_description, responsibilities, educational_requirements, experiences, salary, job_title, phone, email, address } = job;
+
+    const handleApplyNowClick = () => {
+        const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs') || '[]');
+        const isAlreadyApplied = appliedJobs.some(appliedJob => appliedJob.job_id === job.job_id);
+        if (isAlreadyApplied) {
+            swal("You have already applied to this job.");
+        } else {
+            appliedJobs.push(job);
+            localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs));
+            swal("You have applied to the job successfully!");
+        }
+    }
 
     return (
         <div>
@@ -22,7 +36,7 @@ const JobDetails = () => {
                 <div className="md:col-span-2">
                     <h1 className="text-center text-[#1A1919] font-bold underline">{job.job_title}</h1>
                     <p className='text-base mb-3'><span className="text-[#1A1919] font-bold">Job Description: </span><span className='font-medium text-[#757575]'>{job_description}</span></p>
-                    <p className='text-base mb-3'><span className="text-[#1A1919] font-bold">Job Responsibility: </span><span className='font-medium text-[#757575]'>{job_description}</span></p>
+                    <p className='text-base mb-3'><span className="text-[#1A1919] font-bold">Job Responsibility: </span><span className='font-medium text-[#757575]'>{responsibilities}</span></p>
                     <p className='mb-3'>
                         <span className='text-[#1A1919] font-bold'>Educational Requirements:</span> <br />
                         <span className='font-medium text-[#757575]'>
@@ -49,7 +63,7 @@ const JobDetails = () => {
                         <span className='text-[#1A1919] font-bold'>Email: </span> <span className='font-medium text-[#757575]'>{email}</span> <br />
                         <span className='text-[#1A1919] font-bold'>Address: </span> <span className='font-medium text-[#757575]'>{address}</span>
                     </div>
-                    <button className="btn-start-applying px-5 py-3 text-white mt-4">Apply Now</button>
+                    <button onClick={handleApplyNowClick} className="btn-start-applying px-5 py-3 text-white mt-4">Apply Now</button>
                 </div>
             </div>
         </div>

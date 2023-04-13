@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 
 const SingleJob = ({ job, viewDetailsHandler }) => {
     const { job_id, job_title, company_logo, company_name, remote_or_onsite, job_type, address, salary } = job;
+
+    const handleApplyNow = () => {
+        // Add job information to local storage
+        const jobs = JSON.parse(localStorage.getItem('jobs')) || [];
+        jobs.push(job);
+        localStorage.setItem('jobs', JSON.stringify(jobs));
+    }
     return (
         <div >
 
