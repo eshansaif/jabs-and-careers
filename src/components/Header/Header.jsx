@@ -11,6 +11,7 @@ const Header = () => {
                 </div>
                 <div className="">
                     <ul className="menu menu-horizontal px-1 text-[#757575]">
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/statistics">Statistics</Link></li>
                         <li><Link to="/applied-jobs">Applied Jobs</Link></li>
                         <li><Link to="/blogs">Blogs</Link></li>

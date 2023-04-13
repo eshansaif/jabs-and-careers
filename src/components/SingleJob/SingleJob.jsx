@@ -1,8 +1,10 @@
 import React from 'react';
 import './SingleJob.css';
+import { MapPinIcon, CurrencyBangladeshiIcon } from '@heroicons/react/24/solid';
+import { Link } from 'react-router-dom';
 
-const SingleJob = ({ job }) => {
-    const { job_title, company_logo, company_name, remote_or_onsite, job_type, address, salary } = job;
+const SingleJob = ({ job, viewDetailsHandler }) => {
+    const { job_id, job_title, company_logo, company_name, remote_or_onsite, job_type, address, salary } = job;
     return (
         <div >
 
@@ -18,10 +20,15 @@ const SingleJob = ({ job }) => {
                         <div className="py-2 px-4 rounded job-type">{remote_or_onsite}</div>
                         <div className="py-2 px-4 rounded job-type">{job_type}</div>
                     </div>
-                    <p className='text-[#757575] font-medium text-base'>{address}</p>
-                    <p className='text-[#757575] font-medium text-base'>{salary}</p>
+                    <p className='text-[#757575] font-medium text-base flex'>
+                        <MapPinIcon className="h-5 w-5" /> {address}</p>
+                    <p className='text-[#757575] font-medium text-base flex items-center'>
+                        <CurrencyBangladeshiIcon className='h-5 w-5' /> {salary}</p>
                     <div className="card-actions justify-start">
-                        <button className="btn-start-applying px-5 py-3 text-white">View Details</button>
+                        <Link to={`./job/${job_id}`}>
+                            {/* <button onClick={() => viewDetailsHandler(job)} className="btn-start-applying px-5 py-3 text-white">View Details</button> */}
+                            <button onClick={() => viewDetailsHandler(job)} className="btn-start-applying px-5 py-3 text-white">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>

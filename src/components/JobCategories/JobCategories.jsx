@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const JobCategories = () => {
+    AOS.init();
     const [categories, setCategories] = useState([]);
     // console.log(categories);
     useEffect(() => {

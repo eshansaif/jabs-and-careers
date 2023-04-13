@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SingleJob from '../SingleJob/SingleJob';
 
+
 const FeaturedJobs = () => {
 
     const jobs = useLoaderData();
@@ -9,6 +10,10 @@ const FeaturedJobs = () => {
 
     const handleToggleAllJobs = () => {
         setShowAllJobs(!showAllJobs);
+    }
+
+    const viewDetailsHandler = (job) => {
+        // console.log(job);
     }
 
     return (
@@ -19,7 +24,7 @@ const FeaturedJobs = () => {
                 {
                     jobs.map((job, index) => {
                         if (showAllJobs || index < 4) {
-                            return <SingleJob key={job.id} job={job} />;
+                            return <SingleJob key={job.id} job={job} viewDetailsHandler={viewDetailsHandler} />;
                         }
                     })
                 }
