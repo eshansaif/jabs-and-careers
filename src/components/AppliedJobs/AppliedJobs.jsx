@@ -12,11 +12,11 @@ const AppliedJobs = () => {
     return (
         <div>
             <h2 className="text-center">Applied Jobs</h2>
-            <ul>
+            <div>
                 {appliedJobs.map(job => (
                     <AppliedJob key={job.job_id} job={job}></AppliedJob>
                 ))}
-            </ul>
+            </div>
         </div >
     );
 };
