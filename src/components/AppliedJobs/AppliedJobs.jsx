@@ -34,6 +34,7 @@
 
 import React, { useState, useEffect } from 'react';
 import AppliedJob from '../AppliedJob/AppliedJob';
+import DynamicBanner from '../../assets/DynamicBanner';
 
 const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([]);
@@ -52,20 +53,22 @@ const AppliedJobs = () => {
 
     return (
         <div>
-            <h2 className="text-center">Applied Jobs</h2>
-            <div className="flex justify-end">
-                <select className="select select-bordered w-full max-w-xs" onChange={handleFilterChange} value={filter}>
-                    <option value="">Select Option to filter</option>
-                    <option value="On-site">On-site</option>
-                    <option value="Remote">Remote</option>
-                </select>
-            </div>
+            <DynamicBanner pageTitle="Applied Jobs"></DynamicBanner>
             <div>
-                {filteredJobs.map(job => (
-                    <AppliedJob key={job.job_id} job={job}></AppliedJob>
-                ))}
-            </div>
-        </div >
+                <div className="flex justify-end">
+                    <select className="select select-bordered w-full max-w-xs" onChange={handleFilterChange} value={filter}>
+                        <option value="">Select Option to filter</option>
+                        <option value="On-site">On-site</option>
+                        <option value="Remote">Remote</option>
+                    </select>
+                </div>
+                <div>
+                    {filteredJobs.map(job => (
+                        <AppliedJob key={job.job_id} job={job}></AppliedJob>
+                    ))}
+                </div>
+            </div >
+        </div>
     );
 };
 
